@@ -38,8 +38,9 @@ module Hdfs
           path = Path.new(path) unless path.is_a?(Path)
           return @fs.listFiles(path, true) unless block_given?
 
-          @fs.listFiles(path, true).each do |file_status|
-            yield(file_status)
+          ite = @fs.listFiles(path, true)
+          while ite.has_next do
+            yield(ite.next)
           end
         end
 
