@@ -6,7 +6,7 @@
 $ bundle exec hdfs-nukumori-chmod -p /user/civitaspo -c hdfs-site.xml,core-site.xml
 ```
 
-chmod 755 recursive, but chmod 644 if the object is file.
+list recursive, then chmod 644 hdfs files.
 
 ## Contributing
 
