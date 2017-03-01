@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "hdfs/nukumori/chmod"
+
+Hdfs::Nukumori::Chmod::Cli.new.run
